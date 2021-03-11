@@ -74,7 +74,7 @@
         <string/>
        </property>
        <attribute name="title">
-        <string>Main</string>
+        <string>操作</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
@@ -106,7 +106,7 @@
               <item>
                <widget class="QLabel" name="serverLabel">
                 <property name="text">
-                 <string>Server:</string>
+                 <string>链路:</string>
                 </property>
                </widget>
               </item>
@@ -148,7 +148,7 @@
               <item>
                <widget class="QPushButton" name="viewLogButton">
                 <property name="text">
-                 <string>View log</string>
+                 <string>查看日志</string>
                 </property>
                 <property name="icon">
                  <iconset resource="../openconnect-gui.qrc">
@@ -166,7 +166,7 @@
       </widget>
       <widget class="QWidget" name="tabWidget_vpnInfo">
        <attribute name="title">
-        <string>VPN Info</string>
+        <string>VPN 信息</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
@@ -305,16 +305,16 @@
      <x>0</x>
      <y>0</y>
      <width>436</width>
-     <height>20</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>&amp;File</string>
+     <string>开始</string>
     </property>
     <widget class="QMenu" name="menuProfiles">
      <property name="title">
-      <string>&amp;Profiles</string>
+      <string>链路</string>
      </property>
      <addaction name="actionNewProfile"/>
      <addaction name="actionNewProfileAdvanced"/>
@@ -325,24 +325,15 @@
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
    </widget>
-   <widget class="QMenu" name="menuHelp">
-    <property name="title">
-     <string>&amp;Help</string>
-    </property>
-    <addaction name="actionWebSite"/>
-    <addaction name="separator"/>
-    <addaction name="actionAbout"/>
-    <addaction name="actionAboutQt"/>
-   </widget>
    <widget class="QMenu" name="menuView">
     <property name="title">
-     <string>&amp;View</string>
+     <string>日志</string>
     </property>
     <addaction name="actionLogWindow"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
-     <string>&amp;Settings</string>
+     <string>设置</string>
     </property>
     <addaction name="actionMinimizeToTheNotificationArea"/>
     <addaction name="actionMinimizeTheApplicationInsteadOfClosing"/>
@@ -354,11 +345,10 @@
    <addaction name="menuFile"/>
    <addaction name="menuView"/>
    <addaction name="menuSettings"/>
-   <addaction name="menuHelp"/>
   </widget>
   <action name="actionQuit">
    <property name="text">
-    <string>&amp;Quit</string>
+    <string>退出</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -397,12 +387,15 @@
    </property>
   </action>
   <action name="actionNewProfile">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="../openconnect-gui.qrc">
      <normaloff>:/images/text-new.png</normaloff>:/images/text-new.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;New profile</string>
+    <string>增加链路</string>
    </property>
    <property name="toolTip">
     <string>New quick connect profile</string>
@@ -412,6 +405,9 @@
    </property>
   </action>
   <action name="actionEditSelectedProfile">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="../openconnect-gui.qrc">
      <normaloff>:/images/text-editor.png</normaloff>:/images/text-editor.png</iconset>
@@ -422,6 +418,9 @@
    <property name="shortcut">
     <string>Ctrl+E</string>
    </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
   </action>
   <action name="actionRemoveSelectedProfile">
    <property name="icon">
@@ -429,7 +428,7 @@
      <normaloff>:/images/trashcan.png</normaloff>:/images/trashcan.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Remove selected profile</string>
+    <string>删除链路</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+R</string>
@@ -441,7 +440,7 @@
      <normaloff>:/images/edit-find.png</normaloff>:/images/edit-find.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Log window</string>
+    <string>查看日志</string>
    </property>
    <property name="toolTip">
     <string>View log window</string>
@@ -455,7 +454,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Minimize to the notification &amp;area</string>
+    <string>最小化到托盘</string>
    </property>
   </action>
   <action name="actionMinimizeTheApplicationInsteadOfClosing">
@@ -463,7 +462,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Minimize instead of &amp;closing</string>
+    <string>关闭时最小化</string>
    </property>
   </action>
   <action name="actionStartMinimized">
@@ -471,7 +470,10 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Start &amp;minimized</string>
+    <string>连接后最小化</string>
+   </property>
+   <property name="toolTip">
+    <string>启动后最小化</string>
    </property>
   </action>
   <action name="actionWebSite">
@@ -490,10 +492,13 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Single instance mode</string>
+    <string>单实例模式</string>
    </property>
   </action>
   <action name="actionNewProfileAdvanced">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="../openconnect-gui.qrc">
      <normaloff>:/images/text-new.png</normaloff>:/images/text-new.png</iconset>
@@ -506,6 +511,9 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+N</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
    </property>
   </action>
  </widget>

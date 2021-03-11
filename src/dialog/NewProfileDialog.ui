@@ -22,7 +22,7 @@
      <item row="0" column="0">
       <widget class="QLabel" name="labelName">
        <property name="text">
-        <string>Name</string>
+        <string>链路名称</string>
        </property>
        <property name="buddy">
         <cstring>lineEditName</cstring>
@@ -47,7 +47,7 @@
        <item>
         <widget class="QCheckBox" name="checkBoxCustomize">
          <property name="text">
-          <string>&amp;Customize</string>
+          <string>名称自定义</string>
          </property>
         </widget>
        </item>
@@ -56,7 +56,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="labelGateway">
        <property name="text">
-        <string>Gateway</string>
+        <string>链路URL</string>
        </property>
        <property name="buddy">
         <cstring>lineEditGateway</cstring>
@@ -77,31 +77,6 @@
       </widget>
      </item>
     </layout>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item>
-    <widget class="QLabel" name="labelNote">
-     <property name="font">
-      <font>
-       <italic>true</italic>
-      </font>
-     </property>
-     <property name="text">
-      <string>Note: you can anytime later edit profile details...</string>
-     </property>
-    </widget>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
