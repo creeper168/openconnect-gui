@@ -470,7 +470,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>连接后最小化</string>
+    <string>启动后最小化</string>
    </property>
    <property name="toolTip">
     <string>启动后最小化</string>
