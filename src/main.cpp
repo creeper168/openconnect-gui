@@ -22,7 +22,7 @@
 #include "config.h"
 #include "dialog/MyInputDialog.h"
 #include "dialog/mainwindow.h"
-#include "openconnect-gui.h"
+#include "vpnc.h"
 
 #include "FileLogger.h"
 #include "logger.h"

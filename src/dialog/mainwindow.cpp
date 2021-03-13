@@ -22,7 +22,7 @@
 #include "config.h"
 #include "editdialog.h"
 #include "logdialog.h"
-#include "openconnect-gui.h"
+#include "vpnc.h"
 #include "server_storage.h"
 #include "timestamp.h"
 #include "ui_mainwindow.h"

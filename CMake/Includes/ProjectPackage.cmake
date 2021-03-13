@@ -14,9 +14,9 @@ if(APPLE)
     set(CPACK_PACKAGE_ICON ${CMAKE_CURRENT_SOURCE_DIR}/src/Resources/mono_lock.icns)
 endif()
 set(CPACK_PACKAGE_CHECKSUM SHA512)
-set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_CURRENT_SOURCE_DIR}/LICENSE.txt)
-#set(CPACK_RESOURCE_FILE_README ...)
-#set(CPACK_RESOURCE_FILE_WELCOME ...)
+#set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_CURRENT_SOURCE_DIR}/LICENSE.txt)
+set(CPACK_RESOURCE_FILE_README ...)
+set(CPACK_RESOURCE_FILE_WELCOME ...)
 if(WIN32 AND MINGW)
     if(CMAKE_CROSSCOMPILING AND MINGW)
         set(CPACK_GENERATOR "ZIP")
@@ -26,8 +26,8 @@ if(WIN32 AND MINGW)
 
     set(CPACK_NSIS_INSTALLED_ICON_NAME "${PROJECT_NAME}.exe")
     set(CPACK_NSIS_DISPLAY_NAME "${CPACK_PACKAGE_INSTALL_DIRECTORY}")
-    set(CPACK_NSIS_HELP_LINK "https:\\\\\\\\github.com\\\\openconnect\\\\openconnect-gui\\\\wiki\\\\FAQ")
-    set(CPACK_NSIS_URL_INFO_ABOUT "https:\\\\\\\\openconnect.github.io\\\\openconnect-gui")
+    #set(CPACK_NSIS_HELP_LINK "https:\\\\\\\\github.com\\\\openconnect\\\\openconnect-gui\\\\wiki\\\\FAQ")
+    #set(CPACK_NSIS_URL_INFO_ABOUT "https:\\\\\\\\openconnect.github.io\\\\openconnect-gui")
     set(CPACK_NSIS_COMPRESSOR "/SOLID lzma")
     set(CPACK_NSIS_MODIFY_PATH ON)
     set(CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL OFF)
@@ -42,14 +42,14 @@ if(WIN32 AND MINGW)
     set(CPACK_NSIS_EXECUTABLES_DIRECTORY ".")
     set(CPACK_NSIS_MUI_FINISHPAGE_RUN "${PROJECT_NAME}.exe")
 
-    set(CPACK_NSIS_MENU_LINKS
-        "https://openconnect.github.io/openconnect-gui/" "Homepage"
-        "https://github.com/openconnect/openconnect-gui/issues" "Issues"
-        "https://github.com/openconnect/openconnect-gui/wiki/FAQ" "FAQ"
-    )
+    #set(CPACK_NSIS_MENU_LINKS
+    #    "https://openconnect.github.io/openconnect-gui/" "Homepage"
+    #    "https://github.com/openconnect/openconnect-gui/issues" "Issues"
+    #    "https://github.com/openconnect/openconnect-gui/wiki/FAQ" "FAQ"
+    #)
 
     # NSIS'es list of all components
-    set(CPACK_COMPONENTS_ALL App App_Console vpnc_script TAP_drivers VcRedist_libs)
+    set(CPACK_COMPONENTS_ALL App vpnc_script TAP_drivers VcRedist_libs)
 
     set(CPACK_COMPONENT_APP_REQUIRED on)
     set(CPACK_COMPONENT_APP_DISPLAY_NAME "GUI")
@@ -75,13 +75,6 @@ if(WIN32 AND MINGW)
     set(CPACK_COMPONENT_VCREDIST_LIBS_DESCRIPTION "Visual C++ Redistributable Package for Visual Studio 2015")
     set(CPACK_COMPONENT_VCREDIST_LIBS_GROUP "Drivers")
     set(CPACK_COMPONENT_VCREDIST_LIBS_INSTALL_TYPES Full Standard)
-
-    set(CPACK_COMPONENT_APP_CONSOLE_DISABLED on)
-    set(CPACK_COMPONENT_APP_CONSOLE_REQUIRED off)
-    set(CPACK_COMPONENT_APP_CONSOLE_DISPLAY_NAME "console")
-    set(CPACK_COMPONENT_APP_CONSOLE_DESCRIPTION "${PRODUCT_NAME_LONG} (console)")
-    set(CPACK_COMPONENT_APP_CONSOLE_GROUP "Application")
-    set(CPACK_COMPONENT_APP_CONSOLE_INSTALL_TYPES Full)
 
     # custom install command to populate vcredist & NDIS drivers
     # vcredis: http://asawicki.info/news_1597_installing_visual_c_redistributable_package_from_command_line.html

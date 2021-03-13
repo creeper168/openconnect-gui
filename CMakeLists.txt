@@ -10,7 +10,7 @@ if(APPLE)
     endif()
 endif()
 
-project(openconnect-gui
+project(vpnc
     VERSION 1.5.3
     LANGUAGES CXX
 )
@@ -35,12 +35,11 @@ if(MINGW)
 endif()
 add_subdirectory(src)
 
-install(FILES LICENSE.txt
-    DESTINATION .
-    COMPONENT App
-)
+#install(FILES LICENSE.txt
+#    DESTINATION .
+#    COMPONENT App
+#)
 
-include(clang-format)
 include(git_revision_main)
 include(build_timestamp_main)
 

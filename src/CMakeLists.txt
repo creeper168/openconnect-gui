@@ -184,6 +184,31 @@ if(MINGW)
     )
     install(FILES
         ${CMAKE_SOURCE_DIR}/nsis/qt.conf
+        ${CMAKE_SOURCE_DIR}/nsis/Qt5Core.dll
+        ${CMAKE_SOURCE_DIR}/nsis/Qt5Gui.dll
+        ${CMAKE_SOURCE_DIR}/nsis/Qt5Network.dll
+        ${CMAKE_SOURCE_DIR}/nsis/Qt5Widgets.dll
+        ${CMAKE_SOURCE_DIR}/nsis/zlib1.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libxml2-2.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libwinpthread-1.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libunistring-2.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libtasn1-6.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libstoken-1.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libstdc++-6.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libproxy-1.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libp11-kit-0.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libopenconnect-5.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libnettle-8.dll
+        ${CMAKE_SOURCE_DIR}/nsis/liblzma-5.dll
+        ${CMAKE_SOURCE_DIR}/nsis/liblz4.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libintl-8.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libidn2-0.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libiconv-2.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libhogweed-6.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libgnutls-30.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libgmp-10.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libgcc_s_seh-1.dll
+        ${CMAKE_SOURCE_DIR}/nsis/libffi-7.dll
         DESTINATION .
         COMPONENT App
     )

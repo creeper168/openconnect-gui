@@ -21,7 +21,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "openconnect-gui.h"
+#include "vpnc.h"
 
 const char* const appDescription = "@PRODUCT_NAME_SHORT@";
 const char* const appDescriptionLong = "@PRODUCT_NAME_LONG@";
